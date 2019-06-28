@@ -12,7 +12,7 @@ class App < Sinatra::Base
     post '/teams' do
       binding.pry
     
-      @team = params[:name]
+      @team_name = params[:name]
       @team_motto = params[:motto]
       
       
