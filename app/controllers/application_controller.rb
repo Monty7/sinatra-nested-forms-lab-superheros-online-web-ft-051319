@@ -12,7 +12,7 @@ class App < Sinatra::Base
     post '/teams' do
       binding.pry
       erb :super_hero
-      
+      @heroes = Hero.all
     end
 
 
