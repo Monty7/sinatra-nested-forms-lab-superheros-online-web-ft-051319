@@ -16,7 +16,9 @@ class App < Sinatra::Base
       @team_motto = params[:motto]
       erb :super_hero
       
-      params[:heros].each
+      params[:heros].each do |hero|
+        
+      end
       @heroes = Hero.all
     end
 
