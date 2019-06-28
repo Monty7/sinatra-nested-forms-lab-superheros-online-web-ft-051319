@@ -14,9 +14,9 @@ class App < Sinatra::Base
     
       @team_name = params[:team][:name]
       @team_motto = params[:team][:motto]
+  
       
-      
-      params[:team][:heros].each do |hero_hash|
+      params[:team][:heroes].each do |hero_hash|
         Hero.new(hero_hash)
       end
       @heroes = Hero.all
