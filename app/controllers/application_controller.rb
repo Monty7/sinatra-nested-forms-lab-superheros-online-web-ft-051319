@@ -12,8 +12,8 @@ class App < Sinatra::Base
     post '/teams' do
       binding.pry
     
-      @team_name = params[:name]
-      @team_motto = params[:motto]
+      @team_name = params[:team][:name]
+      @team_motto = params[:team][:motto]
       
       
       params[:team][:heros].each do |hero_hash|
