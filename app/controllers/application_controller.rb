@@ -3,7 +3,9 @@ require 'pry'
 
 class App < Sinatra::Base
 
-    set :views, Proc.new { File.join(root, "../views/") }
+    configure do 
+      set :views, 'app/views'
+    end
     
     get '/' do
       erb :team
